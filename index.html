@@ -37,16 +37,19 @@ font-weight: bold;
 <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
 <img src="image.png" alt="imagemblog">
       <button>❤️<span>0</span></button>
-</main>
-
-
+	<button>👍<span>0</span></button>
 </body>
   <script>
-const botao = document.querySelector("button");
+      const botoes = document.querySelectorAll("button");
+botoes.forEach(function(botao) {
 botao.addEventListener("click", botaoClicado);
-    function botaoClicado() {
+
+function botaoClicado() {
+console.log("fui clicado");
 let texto = botao.querySelector("span");
 texto.textContent++;
+}
+});
     }
 </script>  
 
